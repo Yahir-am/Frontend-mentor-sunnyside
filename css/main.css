@@ -1,0 +1,674 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100vh;
+  font-size: 1.125rem;
+  overflow: hidden;
+}
+
+header {
+  background: url("../images/desktop/image-header.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  padding: 1.5em;
+}
+
+@media screen and (max-width: 949px) {
+  header {
+    background: url("../images/mobile/image-header.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100vw;
+    height: 70vh;
+  }
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header nav .bars {
+  font-size: 1.4625rem;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 949px) {
+  header nav .bars {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li {
+  margin: 0 1em;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.0125rem;
+  text-transform: none;
+  font-weight: 600;
+  font-family: "Barlow";
+  text-align: center;
+  letter-spacing: normal;
+  line-height: normal;
+  border-radius: 25px;
+  padding: 0.9em 1.2em;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+header nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.363);
+  color: white;
+}
+
+header nav ul .contact {
+  background: white;
+  color: #000;
+  font-size: 1.0125rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Fraunces";
+  text-align: center;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+@media screen and (max-width: 949px) {
+  header nav ul {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1em;
+    width: calc(100vw - 3rem);
+    height: 20rem;
+    top: 15%;
+    background: white;
+    display: none;
+  }
+  header nav ul::after {
+    content: "";
+    position: absolute;
+    right: 0%;
+    top: -9%;
+    width: 2rem;
+    height: 2rem;
+    border-top: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid white;
+    border-right: 15px solid white;
+  }
+  header nav ul li {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav ul li a {
+    color: #858282;
+    font-size: 1.125rem;
+    text-transform: none;
+    font-weight: 600;
+    font-family: "Barlow";
+    text-align: center;
+    letter-spacing: normal;
+    line-height: normal;
+  }
+  header nav ul li a:hover {
+    background: rgba(250, 212, 0, 0.39);
+    color: inherit;
+  }
+  header nav ul .contact {
+    background: #fad400;
+  }
+}
+
+header nav ul.active {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.title {
+  color: white;
+  font-size: 1.6875rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Fraunces";
+  text-align: center;
+  letter-spacing: 0.4em;
+  line-height: normal;
+  text-align: center;
+}
+
+.title img {
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 819px) {
+  .title {
+    font-size: 1.125rem;
+    margin: 15% auto;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .title {
+    margin: 10% auto;
+  }
+}
+
+.links--grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50vw)[2];
+      grid-template-columns: repeat(2, 50vw);
+  -ms-grid-rows: (75vh)[3];
+      grid-template-rows: repeat(3, 75vh);
+}
+
+@media screen and (max-width: 819px) {
+  .links--grid .stand-transform {
+    height: 55vh;
+  }
+  .links--grid .egg,
+  .links--grid .cup {
+    height: 35vh;
+  }
+  .links--grid .works {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .links--grid {
+    -ms-grid-columns: (100vw)[1];
+        grid-template-columns: repeat(1, 100vw);
+    -ms-grid-rows: (auto)[6];
+        grid-template-rows: repeat(6, auto);
+  }
+  .links--grid .egg {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
+.links--grid .stand-transform {
+  margin: auto 6em;
+}
+
+@media screen and (max-width: 819px) {
+  .links--grid .stand-transform {
+    margin: 2em 1.5em;
+    text-align: center;
+  }
+}
+
+.links--grid .stand-transform h2 {
+  color: #000;
+  font-size: 2.25rem;
+  text-transform: none;
+  font-weight: 900;
+  font-family: "Fraunces";
+  text-align: none;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+.links--grid .stand-transform p {
+  margin: 3em 0;
+  color: #979292;
+  font-size: 1.125rem;
+  text-transform: none;
+  font-weight: 600;
+  font-family: "Barlow";
+  text-align: none;
+  letter-spacing: normal;
+  line-height: 1.5em;
+}
+
+.links--grid .stand-transform a {
+  color: #000;
+  font-size: 1.0125rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Fraunces";
+  text-align: left;
+  letter-spacing: normal;
+  line-height: normal;
+  text-decoration: none;
+  position: relative;
+}
+
+.links--grid .stand-transform a::after {
+  width: 100%;
+  height: 0.3em;
+  border-radius: 3px;
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  background: #fad400;
+  opacity: 0.5;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+.links--grid .stand-transform a:hover::after {
+  opacity: 1;
+}
+
+.links--grid .stand-transform .red::after {
+  background: #fe7867;
+}
+
+.egg {
+  background: url("../images/desktop/image-transform.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.cup {
+  background: url("../images/desktop/image-stand-out.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.graphics {
+  background: url("../images/desktop/image-graphic-design.jpg") center center no-repeat;
+  background-size: cover;
+  color: #25564b;
+}
+
+.photography {
+  background: url("../images/desktop/image-photography.jpg") center center no-repeat;
+  background-size: cover;
+  color: #19536b;
+}
+
+.works {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.works h3 {
+  color: inherit;
+  font-size: 1.6875rem;
+  text-transform: none;
+  font-weight: 900;
+  font-family: "Fraunces";
+  text-align: center;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+.works p {
+  color: inherit;
+  font-size: 1.06875rem;
+  text-transform: none;
+  font-weight: 600;
+  font-family: "Barlow";
+  text-align: center;
+  letter-spacing: normal;
+  line-height: 1.5em;
+  margin: 2em auto 3em;
+  width: 50%;
+}
+
+@media screen and (max-width: 819px) {
+  .works p {
+    width: 80%;
+  }
+}
+
+.testimonials {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 819px) {
+  .testimonials {
+    height: auto;
+  }
+  .testimonials .testimonials-content {
+    margin: 3em 1.5em;
+  }
+  .testimonials .testimonials-content .testimonial {
+    margin: 1.5em;
+  }
+  .testimonials .testimonial__title {
+    margin-top: 20%;
+  }
+}
+
+.testimonials .testimonials-content {
+  margin: auto;
+}
+
+.testimonials .testimonials-content .testimonial-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 4em;
+}
+
+@media screen and (max-width: 819px) {
+  .testimonials .testimonials-content .testimonial-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 2em 0;
+  }
+}
+
+.testimonial__title {
+  color: #9b9797;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-family: "Fraunces";
+  text-align: center;
+  letter-spacing: 0.3em;
+  line-height: normal;
+}
+
+.testimonial {
+  text-align: center;
+  margin: 0 2em;
+}
+
+.testimonial img {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+}
+
+.testimonial p {
+  margin-top: 3em;
+  color: #4d4b4b;
+  font-size: 1.125rem;
+  text-transform: none;
+  font-weight: 400;
+  font-family: "Barlow";
+  text-align: center;
+  letter-spacing: normal;
+  line-height: 1.5em;
+}
+
+.position {
+  margin-top: 3em;
+  color: #aaaaaa;
+  font-size: 0.7875rem;
+  text-transform: none;
+  font-weight: 600;
+  font-family: "Barlow";
+  text-align: center;
+  letter-spacing: normal;
+  line-height: 3em;
+}
+
+.position:first-line {
+  color: #000;
+  font-size: 1.06875rem;
+  text-transform: none;
+  font-weight: 900;
+  font-family: "Fraunces";
+  text-align: center;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+.bottom__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.bottom__images .milk, .bottom__images .orange, .bottom__images .cone, .bottom__images .sugarcubes {
+  width: 25vw;
+  height: 55vh;
+}
+
+.bottom__images .milk {
+  background: url("../images/desktop/image-gallery-milkbottles.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.bottom__images .orange {
+  background: url("../images/desktop/image-gallery-orange.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.bottom__images .cone {
+  background: url("../images/desktop/image-gallery-cone.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.bottom__images .sugarcubes {
+  background: url("../images/desktop/image-gallery-sugarcubes.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 819px) {
+  .bottom__images {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .bottom__images .milk, .bottom__images .orange, .bottom__images .cone, .bottom__images .sugarcubes {
+    width: 50vw;
+    height: 25vh;
+  }
+  .bottom__images .milk {
+    background: url("../images/mobile/image-gallery-milkbottles.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  .bottom__images .orange {
+    background: url("../images/mobile/image-gallery-orange.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  .bottom__images .cone {
+    background: url("../images/mobile/image-gallery-cone.jpg") no-repeat center center;
+    background-size: cover;
+  }
+  .bottom__images .sugarcubes {
+    background: url("../images/mobile/image-gallery-sugar-cubes.jpg") no-repeat center center;
+    background-size: cover;
+  }
+}
+
+footer {
+  width: 100vw;
+  height: 45vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #66d6c0;
+}
+
+footer .logo--footer {
+  width: 15%;
+  height: 2em;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 35vw;
+  list-style: none;
+}
+
+footer ul li a {
+  color: #25564b;
+  font-size: 1.125rem;
+  text-transform: none;
+  font-weight: 600;
+  font-family: "Barlow";
+  text-align: center;
+  letter-spacing: normal;
+  line-height: normal;
+  text-decoration: none;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+footer ul li a:hover {
+  color: white;
+}
+
+@media screen and (max-width: 819px) {
+  footer .logo--footer {
+    width: 45vw;
+    height: 1.5em;
+  }
+  footer ul, footer .media {
+    width: 90vw;
+  }
+}
+
+.media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 25vw;
+  font-size: 1.35rem;
+  color: #25564b;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.media i {
+  cursor: pointer;
+}
+
+.media i:hover {
+  color: white;
+}
